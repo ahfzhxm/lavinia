@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lavinia Bookkeeping</title>
-<meta name="description" content="Bookkeeping, payroll and BAS for food businesses in Melbourne and the Mornington Peninsula: cafés, restaurants and small food manufacturers.">
+<meta name="description" content="Bookkeeping, payroll and BAS for food businesses in Brisbane, QLD and Melbourne, VIC: cafés, restaurants and small food manufacturers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Bodoni+Moda:opsz,wght@6..96,400&family=Corinthia&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -59,12 +59,23 @@
   .hero h1, .hero p, .section-head { margin-left: auto; margin-right: auto; }
   .foot { justify-content: center; }
   .hero .contact-line { font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 0; }
+  .locations { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+  .location { display: inline-flex; align-items: center; gap: 8px; font-size: 1.3rem; font-weight: 600; color: var(--navy); background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 8px 22px 8px 16px; white-space: nowrap; }
+  .location svg { color: var(--accent); flex-shrink: 0; }
+  .contact-line { line-height: 2.1; }
   .contact-line a { text-decoration: none; border-bottom: 1px solid var(--accent); }
   .contact-line .sep { color: var(--accent); margin: 0 12px; }
   .services { list-style: disc inside; padding-left: 0; max-width: 720px; margin: 0 auto; }
   .services li { padding: 6px 0; color: var(--navy-soft); }
   .services li::marker { color: var(--accent); }
   .services strong { color: var(--navy); font-weight: 600; }
+
+  /* Pricing */
+  .price-card { max-width: 420px; margin: 0 auto; text-align: center; background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 40px 28px; }
+  .price { display: flex; justify-content: center; align-items: baseline; gap: 10px; color: var(--navy); }
+  .price .amount { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 4rem; line-height: 1; }
+  .price .unit { font-size: 1.2rem; font-weight: 500; color: var(--navy-soft); }
+  .price-note { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 1.1rem; font-weight: 600; color: var(--accent); }
 
   /* Contact */
   .contact-box { background: var(--navy); color: var(--bg); border-radius: 12px; padding: 52px 40px; text-align: center; }
@@ -79,6 +90,8 @@
 
   @media (max-width: 640px) {
     .hero { padding: 60px 0 56px; }
+    .location { font-size: 1.05rem; padding: 7px 16px 7px 12px; gap: 6px; }
+    .locations { gap: 10px; }
     section { padding: 56px 0; }
     .btn-ghost { margin-left: 0; margin-top: 10px; }
     .contact-box { padding: 40px 22px; }
@@ -96,10 +109,13 @@
 <main>
   <div class="wrap hero">
     <h1>Bookkeeping and payroll for food businesses.</h1>
+    <ul class="locations" aria-label="Locations">
+      <li class="location"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Brisbane, QLD</li>
+      <li class="location"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Melbourne, VIC</li>
+    </ul>
     <p>I help cafés and small food manufacturers keep their books up to date, pay staff correctly and lodge on time, so you can focus on the food.</p>
     <p class="contact-line">
-      <a href="mailto:hello@laviniabookkeeping.com">hello@laviniabookkeeping.com</a>
-      <span class="sep">·</span>
+      <a href="mailto:hello@laviniabookkeeping.com">hello@laviniabookkeeping.com</a><br>
       <a href="tel:+61478916251">0478 916 251</a>
     </p>
   </div>
@@ -108,7 +124,6 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Services</h2>
-        <p>Practical, reliable support that fits around a busy food business.</p>
       </div>
       <ul class="services">
         <li><strong>Bookkeeping</strong> – bank reconciliations, supplier bills, invoicing and POS takings</li>
@@ -116,6 +131,18 @@
         <li><strong>BAS &amp; GST</strong> – accurate GST coding and BAS prepared on time</li>
         <li><strong>Catch-up &amp; clean-up</strong> – behind on your books? I'll get them back in order</li>
       </ul>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Pricing</h2>
+      </div>
+      <div class="price-card">
+        <p class="price"><span class="amount">$50</span><span class="unit">per hour</span></p>
+        <p class="price-note">Flat rate for all services.</p>
+      </div>
     </div>
   </section>
 
